@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+#ArchivoCentral {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ArchivoCentral img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-acceder {
+    position: absolute;
+
+    left: 50%;
+    top: 87%;
+
+    transform: translate(-50%, -50%);
+
+    width: 155px;
+    height: 42px;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+}
+
+
+/* POPUP OCULTO */
+
+.popup {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+}
+
+
+/* POPUP VISIBLE */
+
+.popup.activo {
+    display: flex;
+}
+
+
+.popup-contenedor {
+    position: relative;
+}
+
+.input-password {
+    position: absolute;
+
+    left: 50%;
+    top: 53%;
+
+    transform: translate(-50%, -50%);
+
+    width: 280px;
+    height: 55px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    text-align: center;
+
+    color: #111;
+
+    z-index: 20;
+}
+
+.mensaje-error {
+    display: none;
+
+    position: absolute;
+
+    left: 50%;
+    top: 60%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #b00000;
+
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
+
+    z-index: 30;
+}
+
+.pantalla-oculta {
+    display: none;
+}
+
+#Indice {
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#Indice img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================
+   BOTONES DEL ÍNDICE
+========================= */
+
+#Indice {
+    position: relative;
+}
+
+.btn-indice {
+    position: absolute;
+
+    left: 25%;
+    width: 19%;
+    height: 5%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 10;
+
+    font-family: monospace;
+    font-size: 14px;
+    color: #111;
+
+}
+
+.btn-indice:hover {
+    font-weight: bold;
+    text-decoration-style: wavy;
+}
+
+
+/* 01 */
+
+.btn-01 {
+    top: 46%;
+    left: 22.8%;
+}
+
+
+/* 02 */
+
+.btn-02 {
+    top: 52%;
+    left: 23.6%;
+}
+
+
+/* 03 */
+
+.btn-03 {
+    top: 58%;
+}
+
+
+/* 04 */
+
+.btn-04 {
+    top: 64%;
+}
+
+/* =========================
+   ORIGEN
+========================= */
+
+#Origen {
+    display: none;
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#Origen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+.btn-evidencia {
+    position: absolute;
+
+    left: 14%;
+    top: 81.5%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* BOTÓN VOLVER */
+
+.btn-volver {
+    position: absolute;
+
+    left: 50%;
+    bottom: 4%;
+
+    transform: translateX(-50%);
+
+    background: transparent;
+    border: none;
+
+    font-family: monospace;
+    font-size: 13px;
+
+    color: #111;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.btn-volver:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#Evidencia001 {
+    display: none;
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#Evidencia001 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+.btn-ver-desarrollo {
+    position: absolute;
+
+    left: 75%;
+    top: 13%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+#Desarrollo {
+    display: none;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Desarrollo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+#Evidencia002 {
+    display: none;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Evidencia002 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+.btn-ver-evidencia002 {
+    position: absolute;
+
+    left: 14%;
+    top: 81%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
+
+.btn-ver-evolucion {
+    position: absolute;
+
+    left: 75%;
+    top: 13%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
+
+#Evolucion {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Evolucion img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-ver-evidencia003 {
+    position: absolute;
+
+    left: 14%;
+    top: 81%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
+
+#Evidencia003 {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Evidencia003 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-archivo-restringido {
+ position: absolute;
+
+    left: 50%;
+    top: 87%;
+
+    transform: translate(-50%, -50%);
+
+    width: 155px;
+    height: 42px;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+}
+
+
+ 
+#ArchivoRestringido {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ArchivoRestringido img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================
+   BOTÓN ??? - EVIDENCIA 003
+========================= */
+
+.btn-archivo-restringido {
+    position: absolute;
+
+    left: 75%;
+    top: 13%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
+
+
+/* =========================
+   POPUP 2
+========================= */
+
+#popup2 .popup-contenedor {
+    position: relative;
+}
+
+
+/* INPUT REAL SOBRE LA CAJA GRIS */
+
+.input-password2 {
+    position: absolute;
+
+    left: 50%;
+    top: 54%;
+
+    transform: translate(-50%, -50%);
+
+    width: 25%;
+    height: 8%;
+
+    box-sizing: border-box;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    text-align: center;
+
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    color: #111;
+
+    z-index: 20;
+}
+
+
+/* ERROR DEL SEGUNDO POPUP */
+
+.mensaje-error2 {
+    top: 60%;
+}
+
+/* =========================
+   POPUP 2
+========================= */
+
+#popup2 {
+    background: transparent;
+}
+
+#popup2 .popup-contenedor {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#popup2 .popup-contenedor > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+#ArchivoRestringido2 {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ArchivoRestringido2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* RECTÁNGULO ROJO™ */
+
+.btn-archivo-restringido2 {
+    position: absolute;
+
+    left: 75%;
+    top: 13%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
+
+#Bonus {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Bonus img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-bonus {
+   position: absolute;
+
+    left: 14%;
+    top: 81%;
+
+    width: 18%;
+    height: 6%;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    z-index: 50;
+}
